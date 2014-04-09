@@ -24,7 +24,9 @@ Route::resource('welcome','WelcomeController');
 Route::model('flickr_pic','Flickr_pic');
 Route::get('/flickr', 'FlickrPicController@index');
 Route::get('/flick_favs', 'FlickrPicController@showFavs');
+Route::get('/flickr/delete/{flickr_pic}', 'FlickrPicController@delete');
 Route::post('/flickr_add','FlickrPicController@handleAdd');
+Route::post('/flickr/delete', 'FlickrPicController@handleDelete');
 
 // ===============================================
 // Location SECTION =================================
